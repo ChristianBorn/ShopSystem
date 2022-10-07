@@ -1,9 +1,12 @@
 package org.example;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class ProductRepo {
-    private Map<String, Product> productsInRepo;
+    private Map<String, Product> productsInRepo = new HashMap<>();
+
+    public ProductRepo() {}
 
     public ProductRepo(Map<String, Product> productsInRepo) {
         this.productsInRepo = productsInRepo;
@@ -16,5 +19,11 @@ public class ProductRepo {
         else {
             throw new IllegalArgumentException("No product found for given ID");
         }
+    }
+    public Map<String, Product> listProducts() {
+        return productsInRepo;
+    }
+    public void addProduct(Product product) {
+        productsInRepo.put(product.getId(), product);
     }
 }
