@@ -1,13 +1,18 @@
 package org.example;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Order {
-    private String id;
-    private List<Product> orderedProducts;
+    private final String id;
+    private List<Product> orderedProducts = new ArrayList<>();
 
-    public Order(String id, List<Product> orderedProducts) {
-        this.id = id;
+    public Order(List<Product> orderedProducts) {
+        this.id = helpers.helpers.createUUID();
         this.orderedProducts = orderedProducts;
+    }
+
+    public String getId() {
+        return id;
     }
 }
