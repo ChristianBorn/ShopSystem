@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 public class ShopSystem {
-    private ProductRepo products = new ProductRepo();
+    public ProductRepo products = new ProductRepo();
     private OrderRepo orders = new OrderRepo();
 
     public ShopSystem() {}

@@ -1,8 +1,11 @@
 package org.example;
 
+import jdk.jfr.DataAmount;
+import lombok.Data;
+
 import java.util.HashMap;
 import java.util.Map;
-
+@Data
 public class ProductRepo {
     private Map<String, Product> productsInRepo = new HashMap<>();
 
