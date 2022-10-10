@@ -1,4 +1,6 @@
-package org.example;
+package repo;
+
+import model.Order;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -26,5 +28,9 @@ public class OrderRepo {
 
     public Map<String, Order> listOrders() {
         return ordersInRepo;
+    }
+
+    public String toString() {
+        return ordersInRepo.toString();
     }
 }

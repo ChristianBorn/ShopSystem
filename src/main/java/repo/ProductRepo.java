@@ -1,7 +1,7 @@
-package org.example;
+package repo;
 
-import jdk.jfr.DataAmount;
 import lombok.Data;
+import model.Product;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -28,5 +28,9 @@ public class ProductRepo {
     }
     public void addProduct(Product product) {
         productsInRepo.put(product.getId(), product);
+    }
+
+    public String toString() {
+        return productsInRepo.toString();
     }
 }

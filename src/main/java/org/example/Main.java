@@ -1,5 +1,9 @@
 package org.example;
 
+import model.Product;
+import repo.ProductRepo;
+import service.ShopSystem;
+
 import java.util.List;
 import java.util.Map;
 
@@ -15,10 +19,10 @@ public class Main {
         ));
 
         ShopSystem myShop = new ShopSystem(myProducts);
-        System.out.println(List.of(
-                product1.getId(),
-                product2.getId(),
-                product3.getId()));
+//        System.out.println(List.of(
+//                product1.getId(),
+//                product2.getId(),
+//                product3.getId()));
 
         myShop.createNewOrder(List.of(
                 product1.getId(),
@@ -26,7 +30,7 @@ public class Main {
                 product3.getId()
         ));
 
-        System.out.println(myShop.products.toString());
+        System.out.println(myShop.getAllOrders());
 
     }
 }

@@ -1,8 +1,8 @@
-package org.example;
+package model;
 
 public class Product {
     private final String id;
-    private String name;
+    private final String name;
 
     public Product(String name) {
         this.id = helpers.helpers.createUUID();
@@ -15,5 +15,9 @@ public class Product {
 
     public String getName() {
         return name;
+    }
+
+    public String toString() {
+        return "\nProductname: "+name;
     }
 }
